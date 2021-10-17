@@ -3,10 +3,16 @@
 		<meta charset="utf-8">
 		<TITLE>Welcome to my page</TITLE>
 		<link href="style.css" rel="stylesheet" >
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('#nav').load("nav.html");
+			});
+		</script>
 	</HEAD>
 	<BODY>
-		<div class="header">
-			<nav class="main_menu"><div class="homepage">Home</div></nav>
+		<div id="nav">
+			
 		</div>
 		<div class="body">
 			<p class="red">"Hello World"</p>
