@@ -4,10 +4,11 @@
 		<TITLE>Welcome to my page</TITLE>
 		<link href="style.css" rel="stylesheet" >
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="https://reischlago.github.io/script.js"></script>
 		<script>
-			loadScript("https://reischlago.github.io/script.js", function(){
-			});
+			$(document).ready(function(){
+				$('#nav').load("nav.html");
+				$('#footer').load("footer.html");
+			);
 		</script>
 	</HEAD>
 	<BODY>
