@@ -12,6 +12,7 @@ body {
 }
 .main_menu > div a {
 	padding: 10px;
+	display: block;
 }
 .main_menu a {
 	color: unset;
