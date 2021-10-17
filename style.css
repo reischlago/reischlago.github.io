@@ -10,7 +10,7 @@ body {
     flex-direction: row;
     width: 100%;
 }
-.main_menu > div {
+.main_menu > div a {
 	padding: 10px;
 }
 .main_menu a {
