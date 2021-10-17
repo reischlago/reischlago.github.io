@@ -1,12 +1,32 @@
+body {
+	margin: 0;
+}
+.main_menu {
+	display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+.main_menu > div {
+	padding: 10px;
+}
+.main_menu a {
+	color: unset;
+	text-decoration: none;
+}
 p.red {
 	color:red;
 }
 .social_media{
-	a.insta {
-		color: unset;
-		.logo {
-			height: 35px;
-			width: 35px;
-		}
-	}
+	
+}
+.social_media a.insta {
+	color: unset;
+}
+.social_media a.insta .logo {
+	height: 35px;
+	width: 35px;
 }
