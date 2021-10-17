@@ -1,6 +1,9 @@
 body {
 	margin: 0;
 }
+#nav {
+	background: #bceda3d6;
+}
 .main_menu {
 	display: flex;
     flex-wrap: nowrap;
