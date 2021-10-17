@@ -1,3 +1,12 @@
 p.red {
 	color:red;
 }
+.social_media{
+	a.insta {
+		color: unset;
+		.logo {
+			height: 35px;
+			width: 35px;
+		}
+	}
+}
