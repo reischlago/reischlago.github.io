@@ -1,6 +1,6 @@
 :root {
-  --primary: #007bff;
-  --secondary: #6c757d;
+  --primary: #000000;
+  --secondary: #ffffff;
   --third-color: #ffffff;
   --fourth-color: #000000;
   --light: #f8f9fa;
@@ -57,4 +57,34 @@
     background-size: cover !important;
     background-repeat: no-repeat !important;
     z-index: 1;
+}
+
+.main-header {
+    display: block;
+    width: 100%;
+    background: var(--primary);
+}
+
+.main-header .main-menu-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    max-width: 1139px;
+    margin: 0 auto;
+}
+.main-header .main-menu-nav .menu-item a {
+    padding: 7.5px 10px;
+    display: block;
+    color: var(--secondary);
+	transition: all 0.3s ease 0s;
+    text-decoration: none !important;
+}
+
+.main-header .main-menu-nav .menu-item a:hover {
+    transform: scale(1.1);
+    font-weight: 600;
 }
