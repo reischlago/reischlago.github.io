@@ -1,0 +1,60 @@
+:root {
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --third-color: #ffffff;
+  --fourth-color: #000000;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/*CUSTOM CSS STARTS*/
+
+.img-box {
+	display: block;
+    position: relative;
+    padding: 15px;
+}
+
+.img-box a {
+    
+}
+
+.img-box a:before {
+	content: ' ';
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+
+.img-box .title {
+    z-index: 5;
+    position: relative;
+}
+
+.img-box .subtitle {
+    z-index: 5;
+	position: relative;
+}
+.img-box .box-bg {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    z-index: 1;
+}
