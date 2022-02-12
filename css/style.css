@@ -1,3 +1,4 @@
+/*variables start*/
 :root {
   --primary: #000000;
   --secondary: #ffffff;
@@ -13,9 +14,171 @@
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
+.color-primary {
+	color: var(--primary);
+}
+.color-secondary {
+	color: var(--secondary);
+}
+.bg-primary {
+	background: var(--primary);
+}
+.bg-secondary {
+	background: var(--secondary);
+}
+/*variables end*/
 
 /*CUSTOM CSS STARTS*/
+/*header start*/
+.top-header {
+    display: block;
+    width: 100%;
+    background: var(--primary);
+}
 
+.logo a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+	flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+.logo img {
+    max-height: 40px;
+}
+
+.main-menu-nav {
+    padding: 10px 0;
+}
+
+.main-header {
+    text-align: right;
+}
+.main-header label {
+    margin: 0;
+}
+.hamburger {
+	position: relative;
+	width: 70px;
+	height: 70px;
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: space-between;
+	cursor: pointer;
+	padding: 20px;
+}
+.hamburger:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 20px;
+	background: var(--primary);
+	transform: rotate(0deg);
+	transition: all 0.4s cubic-bezier(0.54, -0.1, 0.57, 0.57);
+}
+.hamburger .hamburger-input {
+	position: absolute;
+	opacity: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	cursor: pointer;
+}
+.hamburger .hamburger-line {
+	width: 100%;
+	background: #fff;
+	height: 2px;
+	display: block;
+	border-radius: 6px;
+	transition: transform 0.4s cubic-bezier(0.54, -0.81, 0.57, 0.57);
+	position: relative;
+}
+.hamburger .hamburger-line.first, .hamburger .hamburger-line.third {
+	width: 50%;
+}
+.hamburger .hamburger-line.third {
+	margin-left: 50%;
+	transform-origin: left;
+}
+
+.menu-button-wrapper {
+	position: relative;
+	display: inline-block;
+}
+.menu-button-wrapper .item-list {
+	position: absolute;
+	top: 75px;
+	transform: translateX(-50%) scale(0);
+	transform-origin: center;
+	transition: all 0.4s cubic-bezier(0.54, -0.1, 0.57, 0.57);
+	background-color: var(--dark);
+	color: #fff;
+	width: 200px;
+	left: 50%;
+	padding: 0;
+	text-align: left;
+	border-radius: 100px;
+	font-weight: 300;
+	opacity: 0;
+	user-select: none;
+	z-index: 100;
+    overflow: hidden;
+	box-shadow: rgb(0 0 0 / 50%) 2px 2px 10px 2px;
+}
+.menu-button-wrapper .item-list div {
+	cursor: pointer;
+}
+.menu-button-wrapper .item-list .menu-item a {
+    color: var(--secondary);
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 10px 30px;
+	transition: all 0.3s ease 0s;
+}
+.menu-button-wrapper .item-list .menu-item a:hover {
+    text-decoration: none;
+    padding: 10px 30px 10px 20px;
+    font-weight: 600;
+}
+.menu-button-wrapper .menu-button {
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	left: 0;
+	z-index: 2;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.menu-button:checked ~ .item-list {
+	transform: translateX(-50%) scale(1);
+	border-radius: 20px;
+	opacity: 1;
+	user-select: auto;
+}
+.menu-button:checked ~ .icon-wrapper .hamburger-line.second {
+	transform: rotate(-45deg);
+}
+.menu-button:checked ~ .icon-wrapper .hamburger-line.first {
+	transform: translate(2px, 8px) rotate(-135deg);
+}
+.menu-button:checked ~ .icon-wrapper .hamburger-line.third {
+	transform: translate(11px, -3px) rotate(-135deg);
+}
+.menu-button:checked ~ .icon-wrapper .hamburger:before {
+	transform: rotate(45deg);
+}
+/*header end*/
+/*image box start*/
 .img-box {
 	display: block;
     position: relative;
@@ -23,7 +186,7 @@
 }
 
 .img-box a {
-    
+    transition: all 0.3s ease 0s;
 }
 
 .img-box a:before {
@@ -40,11 +203,15 @@
 .img-box .title {
     z-index: 5;
     position: relative;
+	transition: all 0.3s ease 0s;
+	color: var(--secondary);
 }
 
 .img-box .subtitle {
     z-index: 5;
 	position: relative;
+	transition: all 0.3s ease 0s;
+	color: var(--secondary);
 }
 .img-box .box-bg {
     display: block;
@@ -57,34 +224,52 @@
     background-size: cover !important;
     background-repeat: no-repeat !important;
     z-index: 1;
-}
-
-.main-header {
-    display: block;
-    width: 100%;
-    background: var(--primary);
-}
-
-.main-header .main-menu-nav {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100%;
-    max-width: 1139px;
-    margin: 0 auto;
-}
-.main-header .main-menu-nav .menu-item a {
-    padding: 7.5px 10px;
-    display: block;
-    color: var(--secondary);
 	transition: all 0.3s ease 0s;
-    text-decoration: none !important;
 }
 
-.main-header .main-menu-nav .menu-item a:hover {
-    transform: scale(1.1);
-    font-weight: 600;
+.img-box:hover .box-bg:after {
+    opacity: 0.6;
+}
+
+.img-box .box-bg:after {
+    content: ' ';
+    background: var(--primary);
+    opacity: 0.4;
+	transition: all 0.5s ease 0s;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/*image box end*/
+
+/*background start*/
+.page-bg-image {
+    width: 100%;
+    height: calc(100vh - 40px);
+    position: absolute;
+}
+/*background end*/
+
+/*Responsive stuff*/
+@media (min-width: 576px) {
+  
+}
+
+@media (min-width: 768px) {
+  
+}
+
+@media (min-width: 992px) {
+	.img-box {
+		min-height: 200px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.img-box {
+		min-height: 250px;
+	}
 }

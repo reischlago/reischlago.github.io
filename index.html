@@ -1,127 +1,157 @@
 <!doctype html>
 <html lang="en-US">
 	<head>
-		<meta charset="UTF-8">
-			<link rel="stylesheet" href="css/bootstrap.min.css"/>
-			<link rel="stylesheet" href="css/style.css"/>
-			<script src="js/jquery-3.6.0.min.js"> </script>
-			<script src="js/bootstrap.min.js"> </script>
-			<script src="js/script.js"> </script>
-			<script>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="css/style.css"/>
+		<script src="js/jquery-3.6.0.min.js"> </script>
+		<script src="js/bootstrap.min.js"> </script>
+		<script src="js/script.js"> </script>
+		<script>
 			$(document).ready(function() {
-				$("#mainHeader").load("menu.html")
+				$("#mainHeader .menu-button-wrapper .item-list").load("menu.html")
 			});
-			</script>
-			<!-- Favicon -->
-			<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
-			<title>MDEF Borbála Moravcsik</title>
-		</head>
-		<body class="body" style="overflow: hidden; height: 100%;">
-			<div class="page-container">
-				<div id="mainHeader" class="main-header">This is replaced by script to header.</div>
-				<div class="container">
-					<div class="row">
-						<div class="col-12">
-							<h1>Hello World!</h1>
-						</div>
-						<div class="col-item col-lg-3 col-md-4 col-sm-6 col-12 p-1">
-							<div class="img-box">
-								<div class="box-bg" style="background: url('images/placeholder.png')"> </div>
-								<a href="#"> </a>
-								<h3 class="title">Title</h3>
-								<div class="subtitle">Subtitle</div>
+		</script>
+		<!-- Favicon -->
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+		<title>MDEF Borbála Moravcsik</title>
+	</head>
+	<body class="body" style="overflow: hidden; height: 100%;">
+		<div class="top-header">
+			<div class="container">
+				<div class="row">
+					<div class="logo col-md-3">
+						<a href="/">
+							<img src="images/mdeflogo.jpg" alt="MDEF Borka Logo"/>
+						</a>
+					</div>
+					<div id="mainHeader" class="main-header col-md-9">
+						<nav class="main-menu-nav">
+							<label class="menu-button-wrapper" for="">
+								<input type="checkbox" class="menu-button"> </input>
+								<div class="icon-wrapper">
+									<label class="hamburger">
+										<input class="hamburger-input" type="checkbox"/>
+									</input>
+									<span class="hamburger-line first"> </span>
+									<span class="hamburger-line second"> </span>
+									<span class="hamburger-line third"> </span>
+								</label>
 							</div>
-						</div>
-						<div class="col-item col-lg-3 col-md-4 col-sm-6 col-12 p-1">
-							<div class="img-box">
-								<div class="box-bg" style="background: url('images/placeholder.png')"> </div>
-								<a href="#"> </a>
-								<h3 class="title">Title</h3>
-								<div class="subtitle">Subtitle</div>
+							<div class="item-list">
+								<!--This is replaced by script to header.-->
 							</div>
-						</div>
-						<div class="col-item col-lg-3 col-md-4 col-sm-6 col-12 p-1">
-							<div class="img-box">
-								<div class="box-bg" style="background: url('images/placeholder.png')"> </div>
-								<a href="#"> </a>
-								<h3 class="title">Title</h3>
-								<div class="subtitle">Subtitle</div>
-							</div>
-						</div>
-						<div class="col-item col-lg-3 col-md-4 col-sm-6 col-12 p-1">
-							<div class="img-box">
-								<div class="box-bg" style="background: url('images/placeholder.png')"> </div>
-								<a href="#"> </a>
-								<h3 class="title">Title</h3>
-								<div class="subtitle">Subtitle</div>
-							</div>
-						</div>
-						<div class="col-item col-lg-3 col-md-4 col-sm-6 col-12 p-1">
-							<div class="img-box">
-								<div class="box-bg" style="background: url('images/placeholder.png')"> </div>
-								<a href="#"> </a>
-								<h3 class="title">Title</h3>
-								<div class="subtitle">Subtitle</div>
-							</div>
-						</div>
-						<div class="col-item col-lg-3 col-md-4 col-sm-6 col-12 p-1">
-							<div class="img-box">
-								<div class="box-bg" style="background: url('images/placeholder.png')"> </div>
-								<a href="#"> </a>
-								<h3 class="title">Title</h3>
-								<div class="subtitle">Subtitle</div>
-							</div>
-						</div>
-						<div class="col-item col-lg-3 col-md-4 col-sm-6 col-12 p-1">
-							<div class="img-box">
-								<div class="box-bg" style="background: url('images/placeholder.png')"> </div>
-								<a href="#"> </a>
-								<h3 class="title">Title</h3>
-								<div class="subtitle">Subtitle</div>
-							</div>
-						</div>
-						<div class="col-item col-lg-3 col-md-4 col-sm-6 col-12 p-1">
-							<div class="img-box">
-								<div class="box-bg" style="background: url('images/placeholder.png')"> </div>
-								<a href="#"> </a>
-								<h3 class="title">Title</h3>
-								<div class="subtitle">Subtitle</div>
-							</div>
-						</div>
-						<div class="col-item col-lg-3 col-md-4 col-sm-6 col-12 p-1">
-							<div class="img-box">
-								<div class="box-bg" style="background: url('images/placeholder.png')"> </div>
-								<a href="#"> </a>
-								<h3 class="title">Title</h3>
-								<div class="subtitle">Subtitle</div>
-							</div>
-						</div>
-						<div class="col-item col-lg-3 col-md-4 col-sm-6 col-12 p-1">
-							<div class="img-box">
-								<div class="box-bg" style="background: url('images/placeholder.png')"> </div>
-								<a href="#"> </a>
-								<h3 class="title">Title</h3>
-								<div class="subtitle">Subtitle</div>
-							</div>
-						</div>
-						<div class="col-item col-lg-3 col-md-4 col-sm-6 col-12 p-1">
-							<div class="img-box">
-								<div class="box-bg" style="background: url('images/placeholder.png')"> </div>
-								<a href="#"> </a>
-								<h3 class="title">Title</h3>
-								<div class="subtitle">Subtitle</div>
-							</div>
-						</div>
-						<div class="col-item col-lg-3 col-md-4 col-sm-6 col-12 p-1">
-							<div class="img-box">
-								<div class="box-bg" style="background: url('images/placeholder.png')"> </div>
-								<a href="#"> </a>
-								<h3 class="title">Title</h3>
-								<div class="subtitle">Subtitle</div>
-							</div>
-						</div>
+						</label>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="page-container">
+		<div class="page-bg-image bg-primary"> </div>
+		<div class="container">
+			<div class="row">
+				<div class="col-12 color-secondary">
+					<h1>Hello World!</h1>
+				</div>
+				<div class="col-item col-lg-3 col-md-4 col-sm-6 col-12 p-1">
+					<div class="img-box">
+						<div class="box-bg" style="background: url('images/placeholder.png')"> </div>
+						<a href="#"> </a>
+						<h3 class="title">Title</h3>
+						<div class="subtitle">Subtitle</div>
+					</div>
+				</div>
+				<div class="col-item col-lg-3 col-md-4 col-sm-6 col-12 p-1">
+					<div class="img-box">
+						<div class="box-bg" style="background: url('images/placeholder.png')"> </div>
+						<a href="#"> </a>
+						<h3 class="title">Title</h3>
+						<div class="subtitle">Subtitle</div>
+					</div>
+				</div>
+				<div class="col-item col-lg-3 col-md-4 col-sm-6 col-12 p-1">
+					<div class="img-box">
+						<div class="box-bg" style="background: url('images/placeholder.png')"> </div>
+						<a href="#"> </a>
+						<h3 class="title">Title</h3>
+						<div class="subtitle">Subtitle</div>
+					</div>
+				</div>
+				<div class="col-item col-lg-3 col-md-4 col-sm-6 col-12 p-1">
+					<div class="img-box">
+						<div class="box-bg" style="background: url('images/placeholder.png')"> </div>
+						<a href="#"> </a>
+						<h3 class="title">Title</h3>
+						<div class="subtitle">Subtitle</div>
+					</div>
+				</div>
+				<div class="col-item col-lg-3 col-md-4 col-sm-6 col-12 p-1">
+					<div class="img-box">
+						<div class="box-bg" style="background: url('images/placeholder.png')"> </div>
+						<a href="#"> </a>
+						<h3 class="title">Title</h3>
+						<div class="subtitle">Subtitle</div>
+					</div>
+				</div>
+				<div class="col-item col-lg-3 col-md-4 col-sm-6 col-12 p-1">
+					<div class="img-box">
+						<div class="box-bg" style="background: url('images/placeholder.png')"> </div>
+						<a href="#"> </a>
+						<h3 class="title">Title</h3>
+						<div class="subtitle">Subtitle</div>
+					</div>
+				</div>
+				<div class="col-item col-lg-3 col-md-4 col-sm-6 col-12 p-1">
+					<div class="img-box">
+						<div class="box-bg" style="background: url('images/placeholder.png')"> </div>
+						<a href="#"> </a>
+						<h3 class="title">Title</h3>
+						<div class="subtitle">Subtitle</div>
+					</div>
+				</div>
+				<div class="col-item col-lg-3 col-md-4 col-sm-6 col-12 p-1">
+					<div class="img-box">
+						<div class="box-bg" style="background: url('images/placeholder.png')"> </div>
+						<a href="#"> </a>
+						<h3 class="title">Title</h3>
+						<div class="subtitle">Subtitle</div>
+					</div>
+				</div>
+				<div class="col-item col-lg-3 col-md-4 col-sm-6 col-12 p-1">
+					<div class="img-box">
+						<div class="box-bg" style="background: url('images/placeholder.png')"> </div>
+						<a href="#"> </a>
+						<h3 class="title">Title</h3>
+						<div class="subtitle">Subtitle</div>
+					</div>
+				</div>
+				<div class="col-item col-lg-3 col-md-4 col-sm-6 col-12 p-1">
+					<div class="img-box">
+						<div class="box-bg" style="background: url('images/placeholder.png')"> </div>
+						<a href="#"> </a>
+						<h3 class="title">Title</h3>
+						<div class="subtitle">Subtitle</div>
+					</div>
+				</div>
+				<div class="col-item col-lg-3 col-md-4 col-sm-6 col-12 p-1">
+					<div class="img-box">
+						<div class="box-bg" style="background: url('images/placeholder.png')"> </div>
+						<a href="#"> </a>
+						<h3 class="title">Title</h3>
+						<div class="subtitle">Subtitle</div>
+					</div>
+				</div>
+				<div class="col-item col-lg-3 col-md-4 col-sm-6 col-12 p-1">
+					<div class="img-box">
+						<div class="box-bg" style="background: url('images/placeholder.png')"> </div>
+						<a href="#"> </a>
+						<h3 class="title">Title</h3>
+						<div class="subtitle">Subtitle</div>
 					</div>
 				</div>
 			</div>
-		</body>
-	</html>
+		</div>
+	</div>
+</body>
+</html>
