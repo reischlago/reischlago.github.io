@@ -21,10 +21,10 @@
 	color: var(--secondary);
 }
 .bg-primary {
-	background: var(--primary);
+	background: var(--primary) !important;
 }
 .bg-secondary {
-	background: var(--secondary);
+	background: var(--secondary) !important;
 }
 /*variables end*/
 
@@ -34,6 +34,12 @@
     display: block;
     width: 100%;
     background: var(--primary);
+    position: fixed;
+    z-index: 1000;
+	transition: all 0.3s ease 0s;
+}
+.page-container {
+    padding-top: 90px;
 }
 
 .logo a {
@@ -114,7 +120,7 @@
 }
 .menu-button-wrapper .item-list {
 	position: absolute;
-	top: 75px;
+	top: 85px;
 	transform: translateX(-50%) scale(0);
 	transform-origin: center;
 	transition: all 0.4s cubic-bezier(0.54, -0.1, 0.57, 0.57);
@@ -178,6 +184,26 @@
 	transform: rotate(45deg);
 }
 /*header end*/
+/*who start*/
+.who .image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.who .text {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.who .text p {
+    margin: 0;
+    padding: 15px 0;
+}
+/*who end*/
 /*image box start*/
 .img-box {
 	display: block;
