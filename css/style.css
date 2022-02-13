@@ -29,6 +29,9 @@
 /*variables end*/
 
 /*CUSTOM CSS STARTS*/
+body {
+	position:relative;
+}
 /*header start*/
 .top-header {
     display: block;
@@ -285,6 +288,18 @@
     opacity: 1;
 }
 /*background end*/
+/*footer start*/
+.footer {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+/*footer end*/
 
 /*Responsive stuff*/
 @media (min-width: 576px) {
@@ -298,6 +313,9 @@
 @media (min-width: 992px) {
 	.img-box {
 		min-height: 200px;
+	}
+	.footer .right {
+		text-align: right;
 	}
 }
 
