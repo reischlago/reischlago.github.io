@@ -187,6 +187,18 @@ body {
 	transform: rotate(45deg);
 }
 /*header end*/
+/*top video section start*/
+.video-container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+	width: 100%;
+    height: calc(100vh - 90px);
+}
+/*top video section end*/
 /*who start*/
 .who .image img {
     max-width: 100%;
@@ -303,11 +315,15 @@ body {
 
 /*Responsive stuff*/
 @media (min-width: 576px) {
-  
+   .img-box {
+		min-height: 100px;
+	}
 }
 
 @media (min-width: 768px) {
-  
+	.img-box {
+		min-height: 150px;
+	}
 }
 
 @media (min-width: 992px) {
