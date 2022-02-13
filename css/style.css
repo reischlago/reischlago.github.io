@@ -315,11 +315,15 @@ body {
 
 /*Responsive stuff*/
 @media (min-width: 576px) {
-  
+   .img-box {
+		min-height: 100px;
+	}
 }
 
 @media (min-width: 768px) {
-  
+	.img-box {
+		min-height: 150px;
+	}
 }
 
 @media (min-width: 992px) {
