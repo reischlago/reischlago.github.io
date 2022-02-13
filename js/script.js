@@ -20,3 +20,19 @@ $(window).scroll(function() {
 		$(".bg-scroll-to-primary").removeClass("in-view");
 	}
 });
+
+function scrollAPage() {
+	var y = $(window).scrollTop() + $(window).height();
+	window.scrollTo({
+		top: y,
+		behavior: 'smooth'
+	});
+	console.log('clicked');
+}
+
+//var y = $(window).scrollTop() + $(window).height();
+//console.log(y);
+//$( ".landing-image .bg-landingimage" ).click(function() {
+//    var x = $(window).scrollTop();
+//    $(window).scrollTop(x+600);
+//});
