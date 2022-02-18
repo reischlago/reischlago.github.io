@@ -31,9 +31,10 @@ function scrollAPage() {
 }
 function scrollNextCont() {
 	$("div").next(".container").addClass("scrollHere");
+	var headerHeight = $("#topHeader").height();
 	var x = $(".scrollHere").offset()
 	window.scrollTo({
-		top: x.top,
+		top: x.top-headerHeight,
 		behavior: 'smooth'
 	});
 	console.log('clicked');
