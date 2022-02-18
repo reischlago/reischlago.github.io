@@ -29,7 +29,7 @@ function scrollAPage() {
 	});
 	console.log('clicked');
 }
-function srcollNextCont() {
+function scrollNextCont() {
 	$("div").next(".container").addClass("scrollHere");
 	var x = $(".scrollHere").offset()
 	window.scrollTo({
