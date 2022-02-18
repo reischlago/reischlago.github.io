@@ -40,9 +40,15 @@ function scrollNextCont() {
 	console.log('clicked');
 }
 
-//var y = $(window).scrollTop() + $(window).height();
-//console.log(y);
-//$( ".landing-image .bg-landingimage" ).click(function() {
-//    var x = $(window).scrollTop();
-//    $(window).scrollTop(x+600);
-//});
+/*$(window).scroll(function() {
+    var contactScroll = $(window).scrollTop();
+	var elementOffset = $(".bd-contact-page .container.contact.contact-cont").offset().top;
+	var height = $(window).height();
+	var distance = (elementOffset - scrollTop);
+	if(distance <= height - 200) {
+		$(".bd-contact-page .container.contact.contact-cont").addClass("in-view");
+	}
+	else {
+		$(".bd-contact-page .container.contact.contact-cont").removeClass("in-view");
+	}
+});*/

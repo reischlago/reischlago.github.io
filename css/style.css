@@ -424,6 +424,10 @@ body {
     min-height: calc(100vh - 90px);
 }
 
+.bd-contact-page .container.contact.contact-cont {
+    padding: 15px 0;
+}
+
 .bd-contact-page .contact-info {
     display: flex;
     flex-direction: column;
@@ -450,6 +454,13 @@ body {
     color: var(--primary);
     font-weight: 500;
     padding: 15px 0;
+	-webkit-transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+}
+
+.bd-contact-page .contact-info:hover a {
+    font-weight: 700;
+	transform: scale(1.05);
 }
 
 .bd-contact-page .contact-info img {
