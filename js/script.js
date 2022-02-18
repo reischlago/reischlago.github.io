@@ -29,6 +29,15 @@ function scrollAPage() {
 	});
 	console.log('clicked');
 }
+function srcollNextCont() {
+	$("div").next(".container").addClass("scrollHere");
+	var x = $(".scrollHere").offset()
+	window.scrollTo({
+		top: x.top,
+		behavior: 'smooth'
+	});
+	console.log('clicked');
+}
 
 //var y = $(window).scrollTop() + $(window).height();
 //console.log(y);
