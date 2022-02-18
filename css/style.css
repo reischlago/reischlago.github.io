@@ -426,6 +426,7 @@ body {
 
 .bd-contact-page .container.contact.contact-cont {
     padding: 15px 0;
+	overflow: hidden;
 }
 
 .bd-contact-page .contact-info {
