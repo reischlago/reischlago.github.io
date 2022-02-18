@@ -251,7 +251,7 @@ body {
 }
 .landing-image .scroll-arrow:after {
     content: ' ';
-    background: url(/images/down-arrow.png);
+    background: url(/images/icons/down-arrow.png);
     width: 75px;
     height: 75px;
     display: block;
