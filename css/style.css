@@ -74,6 +74,7 @@ body {
 .page-container {
     padding-top: 90px;
 	padding-bottom: 70px;
+	min-height: 100vh;
 }
 
 .logo div {
@@ -396,6 +397,28 @@ body {
 }
 /*footer end*/
 
+/*404 page start*/
+.bd-404-page .page-container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+.bd-404-page .wrong-link .image {
+    text-align: center;
+}
+
+.bd-404-page .wrong-link .text {
+    display: flex;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+/*404 page end*/
 /*Responsive stuff*/
 @media (min-width: 576px) {
    .img-box {
