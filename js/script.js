@@ -9,7 +9,7 @@ $(window).scroll(function() {
 });
 
 $(window).scroll(function() {
-    var scrollTop = $(window).scrollTop();
+  var scrollTop = $(window).scrollTop();
 	var elementOffset = $(".bg-scroll-to-primary").offset().top;
 	var height = $(window).height();
 	var distance = (elementOffset - scrollTop);
@@ -22,12 +22,12 @@ $(window).scroll(function() {
 });
 
 function scrollAPage() {
-	var y = $(window).scrollTop() + $(window).height();
+	var y = $(window).scrollTop() + $(window).height() - 90;
 	window.scrollTo({
 		top: y,
 		behavior: 'smooth'
 	});
-	console.log('clicked');
+	//console.log('clicked');
 }
 
 //typing animation starts
