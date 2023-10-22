@@ -11,7 +11,8 @@
 		<script src="../js/script.js"> </script>
 		<script>
 			$(document).ready(function() {
-				$("#mainHeader .menu-button-wrapper .item-list").load("/menu.html")
+				$("#mainHeader .menu-button-wrapper .item-list").load("/menu.html");
+				typeIntro();
 			});
 		</script>
 		<!-- Favicon -->
@@ -48,47 +49,11 @@
 				</div>
 			</div>
 		</div>
-		<div class="page-container ownproj-cont">
-			<div class="section-background bg-primary bg-scroll-to-primary projects">
-				<div class="container">
-					<div class="row">
-						<div class="col-12 color-secondary" id="ownproj">
-							<h1>My own projects</h1>
-						</div>
-						<div class="col-item col-lg-3 col-md-6 col-sm-12 col-12 p-0">
-							<div class="img-box">
-								<div class="box-bg" style="background: url('../images/postcared.png') var(--third-color"> </div>
-								<a href="postcard_webpage/postcared/giving-back-tool.html"> </a>
-								<h3 class="title">Post-cared giving back tool</h3>
-								<div class="subtitle">#JS #CSS #HTML #POSTCARD</div>
-							</div>
-						</div>
-						<div class="col-item col-lg-3 col-md-6 col-sm-12 col-12 p-0">
-							<div class="img-box">
-								<div class="box-bg" style="background: url('../images/placeholder.png') var(--third-color"> </div>
-								<a href="typeinto.html"> </a>
-								<h3 class="title">TypeIntro()</h3>
-								<div class="subtitle">#Javascript #Function</div>
-							</div>
-						</div>
-						<div class="col-item col-lg-3 col-md-6 col-sm-12 col-12 p-0">
-							<div class="img-box">
-								<div class="box-bg" style="background: url('../images/placeholder.png') var(--third-color"> </div>
-								<a href="#"> </a>
-								<h3 class="title">Own Project #3</h3>
-								<div class="subtitle">#Javascript #HTML #CSS</div>
-							</div>
-						</div>
-						<div class="col-item col-lg-3 col-md-6 col-sm-12 col-12 p-0">
-							<div class="img-box">
-								<div class="box-bg" style="background: url('../images/placeholder.png') var(--third-color"> </div>
-								<a href="#"> </a>
-								<h3 class="title">Own Project #4</h3>
-								<div class="subtitle">#Javascript #HTML #CSS</div>
-							</div>
-						</div>
-					</div>
-				</div>
+		<div class="page-container typeIntro">
+      <div class="landing-image">
+				<div class="bg-landingimage bg-secondary" <!--style="background: url('images/landingbg.JPG') #005735"-->> Ágoston</div>
+				<div class="text">I am <span id="typetext" onload="typeIntro()">Ágoston</span></div>
+				<div class="scroll-arrow" onClick="scrollAPage()"> </div>
 			</div>
 		</div>
 		<div class="footer bg-primary color-secondary">
