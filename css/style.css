@@ -320,8 +320,9 @@ body {
 }
 /*landing image end*/
 /*who start*/
+
 .who .image {
-    max-height: 430px;
+    max-height: calc(100vh - 90px);
 }
 
 .who .image img {
