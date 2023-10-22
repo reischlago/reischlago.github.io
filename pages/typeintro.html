@@ -9,6 +9,10 @@
 		<script src="../js/jquery-3.6.0.min.js"> </script>
 		<script src="../js/bootstrap.min.js"> </script>
 		<script src="../js/script.js"> </script>
+    <!-- Prsim code snippet plugin start-->
+		<script src="/js/prism.js"> </script>
+		<link rel="stylesheet" href="/css/prism.css"/>
+    <!--Prism code snippet plugin end-->
 		<script>
 			$(document).ready(function() {
 				$("#mainHeader .menu-button-wrapper .item-list").load("/menu.html");
@@ -55,6 +59,154 @@
 				<div class="text">I am <span id="typetext" onload="typeIntro()">Ágoston</span></div>
 				<div class="scroll-arrow" onClick="scrollAPage()"> </div>
 			</div>
+      <div class="container typeintro-description">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-12 text">
+            <h2>TypeIntro();</h2>
+            <p>I made this small script for an intoduction part of my website, but the I chose to go with another design.</p>
+            <p>It was interesting to create this code, as it involved CSS and JS animations. It was originally called "landing image" hence the CSS class names<br> Here are the code snippets I wrote:</p>
+            <div class="box">
+              <pre>
+                <code class="language-HTML line-numbers" data-prismjs-copy="Copy HTML">
+                  &lt;div class="landing-image"&gt;
+    				        &lt;div class="bg-landingimage bg-secondary"&gt; Ágoston&lt;/div&gt;
+    				        &lt;div class="text"&gt;I am &lt;span id="typetext" onload="typeIntro()"&gt;Ágoston&lt;/span&gt;&lt;/div&gt;
+    				        &lt;div class="scroll-arrow" onClick="scrollAPage()"&gt; &lt;/div&gt;
+    			        &lt;/div&gt;
+                </code>
+              </pre>
+            </div>
+            <div class="box">
+              <pre>
+                <code class="language-css line-numbers" data-prismjs-copy="Copy CSS">
+                  /*landing image start*/
+                  .landing-image {
+                    position: relative;
+                    width: 100%;
+                    height: calc(100vh - 90px);
+                  }
+                  .landing-image .bg-landingimage {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-position: center !important;
+                    background-size: cover !important;
+                    background-repeat: no-repeat !important;
+                    z-index: 1;
+                    transition: all 0.3s ease 0s;
+	                  color: #00000000;
+                    background: rgb(0,87,53);
+                  }
+                  .landing-image .text {
+                    display: block;
+                    margin: 0 auto;
+                    color: white;
+                    z-index: 2;
+                    font-size: 35px;
+                    position: absolute;
+                    top: 50%;
+                    left: 25%;
+                    font-weight: 700;
+                    font-family: monospace;
+                  }
+                  .landing-image .scroll-arrow {
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    z-index: 100;
+	                  transition: all 0.3s ease 0s;
+	                  cursor: pointer;
+                  }
+                  .landing-image .scroll-arrow:after {
+                    content: ' ';
+                    background: url(/images/down-arrow.png);
+                    width: 75px;
+                    height: 75px;
+                    display: block;
+                    z-index: 10;
+                    background-size: cover;
+                    position: absolute;
+                    bottom: 75px;
+                    left: -37.5px;
+                    border: 0;
+                    border-radius: 300px;
+	                  transition: all 0.3s ease 0s;
+	                  animation: bounce 2s infinite;
+	                  -webkit-animation: bounce 2s infinite;
+	                  -moz-animation: bounce 2s infinite;
+	                  -o-animation: bounce 2s infinite;
+                  }
+                  /*landing image end*/
+                </code>
+              </pre>
+            </div>
+            <div class="box">
+              <pre>
+                <code class="language-js line-numbers" data-prismjs-copy="Copy JS">
+                  //typing animation starts
+                    var type_i = 0;
+                    var txt = " and I like challenges";
+                    var txt6 = " and I live in Barcelona";
+                    var txt5 = " and I speak Hungarian, English and German";
+                    var txt4 = " and I like to create websites";
+                    var txt3 = " and I can do fuckin' anything";
+                    var txt2 = " and I am a humble person";
+                    var txt1 = " and I like challenges";
+                    var speed = 50;
+                    var wait = 300;
+                    var timesrun = 0;
+
+                    function typeIntro(){
+	                     if ((type_i &lt; txt.length) || (type_i == 0)) {
+		                     document.getElementById("typetext").innerHTML += txt.charAt(type_i);
+		                     type_i++;
+		                     setTimeout(typeIntro, speed);
+	                     }
+	                     else {
+		                     setTimeout(delIntro, wait);
+	                     }
+                    }
+                    function delIntro() {
+	                     if (type_i != 0) {
+		                     document.getElementById("typetext").innerHTML = document.getElementById("typetext").innerHTML.slice(0, -1);
+		                     type_i = type_i-1;
+		                     setTimeout(delIntro, speed);
+	                     }
+	                     else {
+		                     timesrun = timesrun+1;
+		                     if (timesrun == 1) {
+			                      txt = txt6;
+		                      }
+		                      if (timesrun == 2) {
+			                      txt = txt5;
+		                      }
+		                      if (timesrun == 3) {
+			                      txt = txt4;
+		                      }
+		                      if (timesrun == 4) {
+			                      txt = txt3;
+		                      }
+		                      if (timesrun == 5) {
+			                      txt = txt2;
+		                      }
+		                      if (timesrun == 6) {
+			                      txt = txt1;
+			                      timesrun = 0;
+		                      }
+		                      setTimeout(typeIntro, wait);
+	                     }
+                    }
+                    //typing animation ends
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+      </div>
 		</div>
 		<div class="footer bg-primary color-secondary">
 			<div class="container">
