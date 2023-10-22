@@ -456,6 +456,7 @@ body {
     border-radius: 5px;
     overflow: hidden;
     margin: 15px;
+    box-shadow: #dbdbdb 3px 3px 5px 1px;
 }
 .box.snippet:after {
     content: ' ';
@@ -468,8 +469,12 @@ body {
     background: rgb(0 0 0 / 5%);
     border-radius: 32px;
 }
-.box.snippet > pre {
-    margin: 0;
+.box.snippet > div > pre {
+    margin: 0 !important;
+    background: #ebebeb;
+}
+.snippet .line-numbers .line-numbers-rows {
+    left: -12.5em !important;
 }
 /*Code snippets custom css end*/
 /*footer start*/
