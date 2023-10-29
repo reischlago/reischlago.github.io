@@ -40,7 +40,8 @@
 			<a id="flip" class="clickable">Flip</a>
 		</div>
 		<div class="buttons" id="buttons-cont">
-			<a id="download" class="non-ready">Save</a>
+			<a id="download" class="non-ready">Save as PDF</a>
+  		<a id="downloadPNG" class="non-ready">Save as PNG</a>
 			<a id="generate" class="clickable">Generate</a>
 			<a id="modify" class="clickable non-ready">Edit</a>
 		</div>
@@ -114,10 +115,10 @@
 				if ($("#modify").hasClass("non-ready")) {
 					$("#modify").removeClass("non-ready");
 				}
-				/*setTimeout(function(){
-					$("#download").click();
-					$("#download").removeClass("non-ready");
-				}, 1500);*/
+				setTimeout(function(){
+					$("#downloadPNG").click();
+					$("#downloadPNG").removeClass("non-ready");
+				}, 1500);
 				$("#download").removeClass("non-ready");
 
 			});
@@ -139,6 +140,15 @@
 
 						};
 						html2pdf().set(opt).from(element2).save();
+					}
+				});
+			});
+      $("#downloadPNG").on('click', function(){
+				html2canvas(element, {
+					useCORS: true, logging: true, allowTaint: true, onrendered: function(canvas) {
+						var imageData = canvas.toDataURL("image/jpg");
+						var newData = imageData.replace(/^data:image\/jpg/, "data:application/octet-stream");
+						$("#downloadPNG").attr("download", "postcard.jpg").attr("href", newData);
 					}
 				});
 			});
@@ -164,6 +174,9 @@
 				}
 				if (!$("#download").hasClass("non-ready")) {
 					$("#download").addClass("non-ready");
+				}
+				if (!$("#downloadPNG").hasClass("non-ready")) {
+					$("#downloadPNG").addClass("non-ready");
 				}
 				if ($("#generate").hasClass("non-ready")) {
 					$("#generate").removeClass("non-ready");
