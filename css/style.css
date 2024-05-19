@@ -429,13 +429,16 @@ body {
 
 .who .image {
     max-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 /*set to calc(100vh - 90px) if header is shown*/
 
 .who .image img {
     max-width: 100%;
-    max-height: 95%;
+    max-height: 90%;
     margin: 2.5% auto;
     display: block;
 }
@@ -475,12 +478,12 @@ body {
     /*border-radius: 1.5em;*/
     overflow: hidden;
     transition: all 0.9ms ease-out;
-    min-height: 115px;
+    min-height: 25vh;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
-    height: 100%;
+    height: 25vh;
     cursor: pointer;
 }
 
@@ -605,6 +608,7 @@ body {
     font-size: 13px;
     padding: 10px 20px 10px 10px;
 }
+
 .img-box.focus::after {
     content: "";
     background: url('../images/close.png');
@@ -624,6 +628,7 @@ body {
     line-height: 0;
     transition: 1000ms cubic-bezier(0.68, -0.55, 0.27, 1.55)
 }
+
 .img-box.focus:hover::after {
     transform: rotate(90deg);
 }
@@ -849,47 +854,57 @@ body {
 /*Responsive stuff*/
 @media (min-width: 576px) {
     .img-box {
-        min-height: 125px;
+        min-height: 25vh;
     }
+
     .img-box.focus .title {
         width: 30%;
     }
+
     .img-box.focus .text {
         width: 70%;
     }
+}
 
 @media (min-width: 768px) {
     .img-box {
-        min-height: 190px;
+        min-height: 215px;
+        height: 33vh;
     }
+
     .img-box.focus {
         position: absolute;
         width: 200%;
         height: 200%;
     }
+
     #imgbox5.focus {
         left: 0;
         top: 0;
         height: 100%;
         width: 200%;
     }
+
     #imgbox6.focus {
         right: 0;
         top: 0;
         height: 100%;
         width: 200%;
     }
+
     #imgbox2.focus .title {
         font-size: 1.75rem;
     }
+
     #imgbox2 .date {
         font-size: 0.9rem;
         top: -0.8rem;
     }
+
     #imgbox2 .second-title {
         font-size: 1.75rem;
     }
-}
+
     .menu-button-wrapper .item-list {
         width: 30vw;
         right: -16vw;
@@ -902,7 +917,7 @@ body {
 
 @media (min-width: 992px) {
     .img-box {
-        min-height: 215px;
+        min-height: 230px;
     }
 
     .education .img-box {
