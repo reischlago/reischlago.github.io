@@ -609,6 +609,11 @@ body {
     padding: 10px 20px 10px 10px;
 }
 
+.img-box.focus .text a {
+    color: var(--secondary);
+    font-weight: 300;
+}
+
 .img-box.focus::after {
     content: "";
     background: url('../images/close.png');
