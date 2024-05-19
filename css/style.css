@@ -428,7 +428,7 @@ body {
 /*who start*/
 
 .who .image {
-    max-height: 100vh;
+    max-height: 60vh;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -438,7 +438,7 @@ body {
 
 .who .image img {
     max-width: 100%;
-    max-height: 90%;
+    max-height: 95%;
     margin: 2.5% auto;
     display: block;
 }
@@ -856,7 +856,9 @@ body {
     .img-box {
         min-height: 25vh;
     }
-
+    .who .image {
+        max-height: 100vh;
+    }
     .img-box.focus .title {
         width: 30%;
     }
