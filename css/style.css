@@ -546,7 +546,7 @@ body {
     position: relative;
     transition: all 0.3s ease 0s;
     color: var(--primary);
-    /*text-shadow: 10px 10px 20px black;*/
+    line-height: 1.1;
 }
 
 .img-box .date {
@@ -557,7 +557,7 @@ body {
     font-size: 0.9rem;
     font-weight: 100;
     text-transform: uppercase;
-    top: -1rem;
+    top: -0.8rem;
 }
 
 .img-box.focus .title {
@@ -607,24 +607,25 @@ body {
 }
 .img-box.focus::after {
     content: "";
-    background: url('images/close.png');
+    background: url('../images/close.png');
+    background-size: contain;
     position: absolute;
     display: flex;
     font-size: 40px;
     z-index: 10;
     color: var(--primary);
-    top: 0;
-    right: 0;
-    transform: rotate(45deg);
-    width: 40px;
-    height: 40px;
+    top: 10px;
+    right: 10px;
+    transform: rotate(0deg);
+    width: 30px;
+    height: 30px;
     justify-content: center;
     align-items: center;
     line-height: 0;
     transition: 1000ms cubic-bezier(0.68, -0.55, 0.27, 1.55)
 }
 .img-box.focus:hover::after {
-    transform: rotate(315deg);
+    transform: rotate(90deg);
 }
 
 .img-box .second-title {
@@ -883,7 +884,7 @@ body {
     }
     #imgbox2 .date {
         font-size: 0.9rem;
-        top: -1rem;
+        top: -0.8rem;
     }
     #imgbox2 .second-title {
         font-size: 1.75rem;
