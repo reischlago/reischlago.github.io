@@ -168,6 +168,7 @@ body {
 .page-container {
     padding-top: 0px;
     min-height: 100vh;
+    padding-bottom: 70px;
 }
 
 /*set to padding-top: 90px if you enable header*/
@@ -527,6 +528,7 @@ body {
     justify-content: center;
     align-items: center;
     transition: all 0.3s ease 0s;
+    height: 100%;
 }
 
 .img-box a {
@@ -709,6 +711,7 @@ body {
     padding-top: 15px;
 }
 
+
 #imgbox6.focus .text {
     display: flex;
     flex-wrap: wrap;
@@ -729,6 +732,15 @@ body {
 
 #imgbox6.focus .text .listsubitem:before {
     content: '- ';
+}
+
+#imgbox7.focus .text .listitem {
+    padding-top: 15px;
+    font-weight: 300;
+}
+#imgbox7.focus .text .listsubitem {
+    text-transform: uppercase;
+    font-size: 11px;
 }
 
 .img-box .box-bg {
