@@ -527,6 +527,10 @@ body {
     right: 0;
     top: 0;
 }
+#imgbox9.focus {
+    left: 0;
+    top: 0;
+}
 
 .img-box.focus {
     z-index: 10;
@@ -929,6 +933,13 @@ body {
 
     #imgbox8.focus {
         right: 0;
+        top: 0;
+        height: 100%;
+        width: 200%;
+    }
+    
+    #imgbox9.focus {
+        left: 0;
         top: 0;
         height: 100%;
         width: 200%;
