@@ -30,6 +30,15 @@ function scrollAPage() {
 	//console.log('clicked');
 }
 
+function on() {
+  document.getElementById("overlay").style.display = "block";
+  document.getElementById("overlay-content").style.display = "block";
+}
+function off() {
+  document.getElementById("overlay").style.display = "none";
+  document.getElementById("overlay-content").style.display = "none";
+}
+
 //typing animation starts
 var type_i = 0;
 var txt = " and I like challenges";
