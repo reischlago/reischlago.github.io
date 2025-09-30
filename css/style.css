@@ -437,7 +437,7 @@ body {
     justify-content: center;
     align-items: center;
     display: flex;
-    background-image: url(images/agostons_portrait.jpg);
+    background-image: url(/images/agostons_portrait.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
