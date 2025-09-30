@@ -428,11 +428,19 @@ body {
 /*landing image end*/
 /*who start*/
 
+#who {
+    max-width: 100%;
+}
+
 .who .image {
     max-height: 60vh;
     justify-content: center;
     align-items: center;
     display: flex;
+    background-image: url(images/agostons_portrait.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /*set to calc(100vh - 90px) if header is shown*/
@@ -441,7 +449,7 @@ body {
     max-width: 100%;
     max-height: 95%;
     margin: 2.5% auto;
-    display: block;
+    display: none;
 }
 
 .who .text {
@@ -451,6 +459,7 @@ body {
     align-content: flex-start;
     justify-content: center;
     align-items: stretch;
+    height: 100vh;
 }
 
 .who .text p {
