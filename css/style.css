@@ -612,6 +612,10 @@ body {
     display: block;
     align-self: flex-end;
 }
+.img-box .subsubtitle {
+    font-size: 12px;
+    font-weight: 400;
+}
 
 .img-box.focus .subtitle {
     display: none;
