@@ -1,315 +1,328 @@
 <!doctype html>
-<html lang="en-US">
-
+<html lang="en">
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="google-site-verification" content="hGJXivH8Uk7Oy0GSTqPKajKsoCUcul990s6IxwN248g" />
-	<link rel="stylesheet" href="css/bootstrap.min.css" />
-	<link rel="stylesheet" href="css/style.css" />
-	<script src="js/jquery-3.6.0.min.js"> </script>
-	<script src="js/bootstrap.min.js"> </script>
-	<script src="js/script.js"> </script>
-	<!-- Favicon -->
-	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.svg" />
-	<title>Ágoston Reischl</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="google-site-verification" content="hGJXivH8Uk7Oy0GSTqPKajKsoCUcul990s6IxwN248g" />
+  <meta name="description" content="Portfolio of Ágoston Reischl — Cloud and Infrastructure Engineer." />
+  <meta name="color-scheme" content="light dark" />
+  <script>
+    (function () {
+      var saved = localStorage.getItem("theme");
+      var systemDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      var theme = saved || (systemDark ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.svg" />
+  <link rel="stylesheet" href="css/main.css" />
+  <title>Ágoston Reischl | Cloud & Infrastructure Engineer</title>
 </head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Go to top">Ágoston Reischl</a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode">
+        <span class="theme-toggle__icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
 
-<body class="body" style="height: 100%;">
-	<div class="overlay" id="overlay" onclick="off()">
-		<div class="overlay-content" id="overlay-content">
-			<span class="closebtn" onclick="off()" title="Close Overlay">×</span>
-			<div id="overlay-text">The site is not up-to-date currently. Please check my <a href="https://www.linkedin.com/in/agoston-reischl/" target="_blank">LinkedIn</a> for updated information.</div>
-		</div>
-	</div>
-	<div id="topHeader" class="top-header">
-		<div class="container">
-			<div class="row">
-				<div class="logo col-12">
-					<div>
-						<a href="/"><img src="images/logo.svg" alt="Agoston Reischl Logo" /></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="page-container">
-		<div class="container bg-primary who" id="who">
-			<div class="row">
-				<div class="col-lg-6 col-md-6 col-sm-4 col-12 image">
-					<img src="images/agostons_portrait.jpg" alt="Ágoston portrait" />
-				</div>
-				<div class="col-lg-6 col-md-6 col-sm-8 col-12 text">
-					<h2>Hello, I'm Ágoston</h2>
-					<p>An IT professional with several years of work experience in different development, support and
-						management positions; skilled in various fields, from web-design at a small company, through IT
-						Infrastructure management in the Hungarian branch of ING Bank, to  working as a Cloud
-						Engineer for Google, providing premium support on the Google Cloud Platform for Networking
-						products.</p>
-					<p>Most recently, I had succesfully finished my Master's degree 
-						at the Unviversity of Amsterdam. The Information Systems track of the Information Studies MSc 
-						is focusing on translating societal, economical and practical needs into information technology 
-						requirements. Developing prototypes for research based solutions was an integral part of the studies, 
-						which were developed through teamwork full of experiments. <br>
-						The Master's Thesis titled "Anomaly detection in smart buildings: A case study of the University of 
-						Amsterdam's Lab42 building" was about the development of a pipeline prototype, for detecting anomalies 
-						in a building of the University of Amsterdam, using machine learning methods over the vast amount of 
-						sensor data.
-					</p>
-				</div>
-			</div>
-		</div>
-		<div class="section-background bg-primary bg-scroll-to-primary projects">
-			<div class="container work">
-				<div class="row">
-					<div class="col-12 color-secondary" id="workplaces">
-						<h1>Experience</h1>
-					</div>
-					<div class="col-item col-lg-6 col-md-6 col-sm-12 col-12 p-0">
-						<div class="img-box" id="imgbox1" onclick="inFocus(this)">
-							<div class="box-bg" style="background: url('images/webhelp.svg') var(--third-color)"> </div>
-							<a href="/pages/webhelp.html"> </a>
-							<h3 class="title"><span class="nofocus">Cloud Engineer</span><span class="onfocus">Cloud Engineer</span><br><span
-									class="date">2023 January - 2024 August</span><br><span class="subsubtitle onfocus">Technical Support Representative, backup Subject
-									Matter Expert</span></h3>
-							<div class="subtitle">#Google #Network #Infrastructure #Linux</div>
-							<div class="text">
-								I started working at Webhelp in January of 2023, where I joined a team which solely
-								works for Google, providing technical support for the most premium clients of Google. My
-								area of expertise is networking, so I mainly work with IT professionals to resolve their
-								issues on the Google Cloud Platform, which are related to theirloud or hybrid
-								network.<br>
-								After 5 months of being in the job, there was an internalopportunity to qualify as a
-								Subject Matter Expert, so I can offer guidance and technical expertise not just in my
-								local colleagues, but for others around the globe as well.<br>
-								In this job, I have gained valuable experiences in managing stressful customers and
-								resolving technical issues quickly and efficiently, as we are handling highly reputable
-								customers. When something is not working as expected the time we spend on resolving or
-								mitigating the issues can be measured in millions of dollars, which also affects the
-								customers' anxiety level.<br>
-								As part of the networking team, my main field of work is regarding Kubernetes, Load
-								Balancing, hybrid connectivity, network performance, Cloud DNS, and other networking
-								products.
-							</div>
-						</div>
-					</div>
-					<div class="col-item col-lg-6 col-md-6 col-sm-12 col-12 p-0">
-						<div class="img-box" id="imgbox2" onclick="inFocus(this)">
-							<div class="box-bg" style="background: url('images/ING.jpeg') var(--third-color)"> </div>
-							<a href="pages/ing.html"> </a>
-							<h3 class="title">IT Infrastructure Manager<br><span class="date onfocus">2021 March - 2023
-									January</span><span class="date nofocus">2020 September - 2023 January</span><br><span class="subsubtitle onfocus">Ops Engineer Infrasructure</span></h3>
-							<h3 class="second-title"> IT Infrastructure Trainee<br><span class="date">2020 September -
-									2021 March</span></h3>
-							<div class="subtitle">#ING #Banking #Infrastructure</div>
-							<div class="text">
-								After being promoted from a trainee position, I became responsible for the maintenance,
-								development and management of the IT Infrastructure of the ING Bank Hungary Branch,
-								which consistsof a main office, two data-centers and a DR location.<br>
-								In this position I had the chance to manage or take part in various projects, such as
-								the office relocation aftercare, network redesign, LCM projects, office Audio-Visual
-								solution implementation, physical security system implementation, etc. My role required
-								me to be in constant contact with vendors, support teams and, of course, local
-								departments.<br>
-								In this position I worked closely together with the IT SecurityOfficer and the
-								Application Operations team, regarding the network component of any required reports. It
-								also required me to implement security measures for vulnerabilities found in in-house or
-								externally audited penetration tests.
-							</div>
-							<div class="text2">
-								As an IT Infrastructure Trainee, I had a significant role in the last phases of an
-								office relocation and renovation project. During the renovation I have represented the
-								IT requirements regarding physical network cabling, for example. I supported projects
-								such asthe implementation of audio-visual devices and physical security systems. During
-								my job I was the point of contact for the IT Infrastructure team with my colleagues,
-								with vendors and with our network support staff mainly from Poland and the Netherlands.
-								Due to the pandemic I was the remote hand as well for our network support team, thus I
-								gained experiences in the physical implementation of networks.
-							</div>
-						</div>
-					</div>
-					<div class="col-item col-lg-6 col-md-6 col-sm-12 col-12 p-0">
-						<div class="img-box" id="imgbox3" onclick="inFocus(this)">
-							<div class="box-bg" style="background: url('images/cesyslogo.png') var(--third-color)">
-							</div>
-							<a href="pages/cesys.html"> </a>
-							<h3 class="title">Web Designer<br><span class="date">2018 March - 2020 August</span></h3>
-							<div class="subtitle">#HTML #CSS #JavaScript #Bootstrap4 #Front-end</div>
-							<div class="text">
-								My key responsibility was to develop and write the code of new websites for travel
-								agencies, according to a chosen design, but also included supporting and communicating
-								with customers. I mainly used the following technologies and code languages: CSS, SASS,
-								JavaScript, JQuery, HTML, Bootstrap 3 and 4
-							</div>
-						</div>
-					</div>
-					<div class="col-item col-lg-6 col-md-6 col-sm-12 col-12 p-0">
-						<div class="img-box" id="imgbox4" onclick="inFocus(this)">
-							<div class="box-bg" style="background: url('images/code_bg.jpg') var(--third-color)"> </div>
-							<a href="/pages/own-project.html"> </a>
-							<h3 class="title">Projects</h3>
-							<div class="subtitle">#HTML #CSS #JavaScript #Coding</div>
-							<div class="text">
-								<!--a href="pages/own-project.html">Click here to check them out!</a-->
-								I have been working on some projects in my free time, click on the names to check them
-								out!
-								<div class="listitem"><a href=pages/typeintro.html>TypeIntro();</a></div>
-								<!--div class="listitem">Own Project #2</div>
-								<div class="listitem">Own Project #3</div>
-								<div class="listitem">Own Project #4</div-->
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="section-background bg-primary bg-scroll-to-primary projects school">
-			<div class="container education">
-				<div class="row">
-					<div class="col-12 color-secondary" id="education">
-						<h1>Education</h1>
-					</div>
-					<div class="col-item col-lg-4 col-md-4 col-sm-12 col-12 p-0">
-						<div class="img-box" id="imgbox9" onclick="inFocus(this)">
-							<div class="box-bg"
-								style="background: url('images/uvalogo.svg') var(--third-color); background-size: contain !important;">
-							</div>
-							<a href="/pages/university.html"> </a>
-							<h3 class="title">University of Amsterdam<br><span class="date">2024 September -
-									2025 July</span></h3>
-							<div class="subtitle">#InformationStudies #UvA #MSc</div>
-							<div class="text">
-								Information Studies is a broad and interdisciplinary field, primarily concerned with analysing, collecting, classifying, 
-								manipulating, storing, retrieving and disseminating information. It examines how people, organisations and any existing 
-								information systems interact, in order to create, replace, improve or understand those systems. <br>
-								In the Information Studies' track Information Systems I learned to conceptualise, build and evaluate complex technical 
-								systems in a techno-social context. Through applied and research-based education and experimentation I became an expert 
-								in emerging and future technology in information systems. I have encountered themes like sensor technology, semantic web 
-								technology, mobile systems, information retrieval and privacy.<br>
-								<a href="https://github.com/reischlago/lab42_anomaly_detection/blob/91a5a0f82722478fc093dde5f3519a4b0911e4fa/Agoston_Reischl_Master_Thesis.pdf">
-								My master's thesis </a> examined the possibilities of using vast amount of sensor data for anomaly detection in a smart university building.
-								As part of the thesis project, a prototype pipeline was developed that started with the collection of data, and through the 
-								macine learning based anomaly detection, ended with the visualisation of the results. The prototype was developed in Python, 
-								using Pandas, Scikit-learn and Matplotlib.
-							</div>
-						</div>
-					</div>
-					<div class="col-item col-lg-4 col-md-4 col-sm-12 col-12 p-0">
-						<div class="img-box" id="imgbox5" onclick="inFocus(this)">
-							<div class="box-bg"
-								style="background: url('images/corvinus_logo_en.png') var(--third-color); background-size: contain !important;">
-							</div>
-							<a href="/pages/university.html"> </a>
-							<h3 class="title">Corvinus University of Budapest<br><span class="date">2016 September -
-									2021 January</span></h3>
-							<div class="subtitle">#BusinessInformatics #BCE #BSc</div>
-							<div class="text">
-								I completed my state-founded BA studies in Business Information Technology at Corvinus
-								University of Budapest. During my studies, I was learning coding languages, like C# (for
-								three semesters), SQL, web designer tools (HTML, CSS, JavaScript), Excel VBA, macros and
-								Solver, I have used Tableau and RaipidMiner for BI analytics and data science.<br>
-								My studies included micro- and macroeconomics, the basics of accounting and corporate
-								finances, alongside business management, as part of the economics block of the BA
-								course.<br>
-								The courses had strong emphasis on the relation between society and Informational
-								Technology, as well as its impact on people and businesses.<br>
-								Most of our assessments were focusing on case studies of corporate IT and presentational
-								skills which are required for submitting initiatives and business reports for corporate
-								leaders or private investors.<br>
-								<a href="Agoston_Reischl_thesis_summary.pdf" target="_blank">My thesis</a> was about customer profiling in the traveling industry, with a research
-								focusing on the legal, business and societal issues of developing and using customer
-								profiling systems.
-							</div>
-						</div>
-					</div>
-					<div class="col-item col-lg-4 col-md-4 col-sm-12 col-12 p-0">
-						<div class="img-box" id="imgbox6" onclick="inFocus(this)">
-							<div class="box-bg"
-								style="background: url('images/google_cert_bg.png') var(--third-color); background-size: contain !important;">
-							</div>
-							<a href="pages/certifications.html"> </a>
-							<h3 class="title">Courses and Certifications</h3>
-							<div class="subtitle">#Kubernetes #GCP #DataEthics</div>
-							<div class="text">
-								I have gained a few certifications:
-								<div class="listitem"><a
-										href="https://www.credly.com/badges/5cec405a-3344-4270-9a72-e64d88ffe028/public_url" target="_blank">Google
-										Cloud Certified Assiciate Cloud Engineer</a></div>
-								<div class="listitem">Completion of Google Cloud Platform related courses</div>
-								<div class="listsubitem">Google Cloud Fundamentals: Core Infrastructure</div>
-								<div class="listsubitem">Essential Google Cloud Infrastructure: Foundation</div>
-								<div class="listsubitem">Multi-Cluster, Multi-Cloud with Anthos</div>
-								<div class="listsubitem">Getting Started with Google Kubernetes Engine</div>
-								<div class="listitem">Completion of courses by the University of Michigan</div>
-								<div class="listsubitem">Data Science Ethics</div>
-								<div class="listsubitem">Generative AI Essentials: Overview and Impact</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="section-background bg-primary bg-scroll-to-primary projects activities">
-			<div class="container other-activities">
-				<div class="row">
-					<div class="col-12 color-secondary" id="activities">
-						<h1>Other activities</h1>
-					</div>
-					<div class="col-item col-lg-6 col-md-6 col-sm-12 col-12 p-0">
-						<div class="img-box" id="imgbox7" onclick="inFocus(this)">
-							<div class="box-bg"
-								style="background: url('images/sailing.jpg') var(--third-color); background-size: cover !important;">
-							</div>
-							<a href="/pages/university.html"> </a>
-							<h3 class="title">Sailing</h3>
-							<div class="subtitle">#BlueRibbon #Balaton #Celox</div>
-							<div class="text">
-								I have participated in a few sailing competitions on Lake Balaton with my father and younger brother:
-								<div class="listitem">LVII. Blue Ribbon Round the Lake Balaton Race</div>
-								<div class="listsubitem">2025 July |  248th place  |  Hungary</div>
-								<div class="listitem">LVI. Blue Ribbon Round the Lake Balaton Race</div>
-								<div class="listsubitem">2024 July |  225th place  |  Hungary</div>
-								<div class="listitem">LV. Blue Ribbon Round the Lake Balaton Race</div>
-								<div class="listsubitem">2023 July |  282nd place  |  Hungary</div>
-								<div class="listitem">White Ribbon - GeneralCom race </div>
-								<div class="listsubitem">2023 July |  150th place  |  Hungary</div>
-								<div class="listitem">LIV. Blue Ribbon Round the Lake Balaton Race</div>
-								<div class="listsubitem">2022 July |  180th place  |  Hungary</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-item col-lg-6 col-md-6 col-sm-12 col-12 p-0">
-						<div class="img-box" id="imgbox8" onclick="inFocus(this)">
-							<div class="box-bg"
-								style="background: url('images/regnum.jpg') var(--third-color); background-size: cover !important;">
-							</div>
-							<a href="pages/certifications.html"> </a>
-							<h3 class="title">Youth group</h3>
-							<div class="subtitle">#YouthGroup #Regnum #CampLeader #Pivik</div>
-							<div class="text">
-								Between 2016 and 2021 I volunteered as a youth group leader for a group of kids between the age of 12 and 20. I was voulunteering with a friend and we organised weekly gatherings during the school-year and a week long camp every summer.
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="footer bg-primary color-secondary">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-12 left">&copy; Ágoston Reischl 2025 <br> The site does not use cookies.</div>
-				<div class="col-md-6 col-12 right">
-					<a href="tel:+36204025637">+36 20 402 5637</a>
-					|
-					<a href="mailto:agostonreischl@gmail.com">agostonreischl@gmail.com</a>
-					|
-					<a href="Agoston_Reischl_resume.pdf" target="_blank">Resume</a>
-					|
-					<a href="https://www.linkedin.com/in/agoston-reischl/" target="_blank">LinkedIn</a>
-				</div>
-			</div>
-		</div>
-	</div>
+  <main id="main">
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Cloud & Infrastructure Engineer</p>
+          <h1>Building secure, scalable systems that teams trust.</h1>
+          <p class="hero-lead">
+            I am Ágoston Reischl, a cloud and infrastructure engineer with 7+ years of experience across Google Cloud networking,
+            enterprise infrastructure, automation, and software development.
+          </p>
+          <p class="rotating-line">
+            Focus:
+            <span id="rotating-text">Google Cloud networking</span>
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Get in touch</a>
+            <a class="btn btn-secondary" href="Agoston_Reischl_CV_2026_SE.pdf" target="_blank" rel="noopener">Download CV</a>
+          </div>
+        </div>
+        <div class="hero-image reveal">
+          <img src="images/agoston_portrait_web.jpg" alt="Portrait of Ágoston Reischl" width="1000" height="1500" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">About</p>
+          <h2>Engineer mindset, business awareness, and clear communication.</h2>
+        </div>
+        <div class="grid-2">
+          <article class="card reveal">
+            <h3>Profile</h3>
+            <p>
+              I design infrastructure solutions for complex environments, lead cross-functional initiatives, and translate business
+              requirements into reliable technical outcomes. My work spans cloud networking, hybrid architecture, IT security,
+              incident/change operations, and practical GenAI adoption in engineering workflows.
+            </p>
+          </article>
+          <article class="card reveal">
+            <h3>Languages</h3>
+            <ul class="list">
+              <li>English — Full professional</li>
+              <li>Hungarian — Native</li>
+              <li>German — B2</li>
+              <li>Spanish — Elementary</li>
+              <li>Dutch — Learning</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Experience</p>
+          <h2>From web development to cloud and infrastructure leadership.</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-head">
+              <h3>System Environment Designer · Philips</h3>
+              <p>Eindhoven, NL · Jan 2026 — Present</p>
+            </div>
+            <details open>
+              <summary>Highlights</summary>
+              <ul class="list">
+                <li>Technical lead for IT infrastructure and engineering tooling in Test.</li>
+                <li>Designed connectivity architectures for medical imaging test environments.</li>
+                <li>Owned IT security for 30+ medical imaging test systems.</li>
+                <li>Built Node.js and web tools for data collection, reporting, and planning.</li>
+                <li>Drove practical GenAI adoption and automation opportunities.</li>
+              </ul>
+            </details>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-head">
+              <h3>Cloud Engineer · Concentrix (Google external workforce)</h3>
+              <p>Barcelona, ES · Jan 2023 — Aug 2024</p>
+            </div>
+            <details>
+              <summary>Highlights</summary>
+              <ul class="list">
+                <li>Supported Google’s largest customers on GCP networking products.</li>
+                <li>Resolved Kubernetes, Load Balancing, hybrid connectivity, and Cloud DNS issues.</li>
+                <li>Provided best-practice architecture guidance and performance tuning support.</li>
+                <li>Qualified as Subject Matter Expert and supported global teams.</li>
+              </ul>
+            </details>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-head">
+              <h3>Ops Engineer Infrastructure · ING Bank</h3>
+              <p>Budapest, HU · Apr 2021 — Jan 2023</p>
+            </div>
+            <details>
+              <summary>Highlights</summary>
+              <ul class="list">
+                <li>Managed office, data-center, and disaster-recovery infrastructure.</li>
+                <li>Represented infrastructure in relocation, redesign, and lifecycle programs.</li>
+                <li>Implemented security measures from penetration-test findings.</li>
+                <li>Led incident/change operations in high-availability environments.</li>
+              </ul>
+            </details>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-head">
+              <h3>IT Infrastructure Trainee · ING Bank</h3>
+              <p>Budapest, HU · Sep 2020 — Mar 2021</p>
+            </div>
+            <details>
+              <summary>Highlights</summary>
+              <ul class="list">
+                <li>Supported infrastructure operations and ad-hoc technical tasks.</li>
+                <li>Contributed to office relocation and on-site disaster recovery tests.</li>
+              </ul>
+            </details>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-head">
+              <h3>Web Designer / Front-End Developer · UTAZASIRENDSZER Kft.</h3>
+              <p>Budapest, HU · Mar 2018 — Aug 2020</p>
+            </div>
+            <details>
+              <summary>Highlights</summary>
+              <ul class="list">
+                <li>Built responsive sites with HTML, CSS, JavaScript, and Bootstrap.</li>
+                <li>Collaborated directly with customers for launches and maintenance.</li>
+              </ul>
+            </details>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Highlighted projects</p>
+          <h2>Applied ML, analytics pipelines, and product building.</h2>
+        </div>
+        <div class="grid-2">
+          <article class="card reveal">
+            <h3>Anomaly Detection in Smart Buildings</h3>
+            <p class="meta">Master Thesis · University of Amsterdam · Jan 2025 — Jul 2025</p>
+            <ul class="list">
+              <li>Built a cyber-physical anomaly detection system for Lab42.</li>
+              <li>Combined NAIA clustering and LSTM-autoencoder models.</li>
+              <li>Reached up to 98% detection accuracy.</li>
+              <li>Designed an SQL data pipeline over 38M+ sensor readings.</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <h3>Artiq</h3>
+            <p class="meta">REC Impact Startup Program · Feb 2025 — Present</p>
+            <ul class="list">
+              <li>Designed a platform matching artists with galleries and collectors.</li>
+              <li>Built on machine learning and computer vision concepts.</li>
+              <li>Contributed to business planning and MVP development.</li>
+              <li>Focused on system design, front-end, and cloud hosting.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Skills</p>
+          <h2>Core capabilities across cloud, infrastructure, and software.</h2>
+        </div>
+        <div class="chips-wrap reveal">
+          <h3>Google Cloud Platform</h3>
+          <div class="chips">
+            <span>VPC</span><span>Hybrid Connectivity</span><span>Cloud DNS</span><span>CDN</span><span>Load Balancing</span>
+            <span>GKE</span><span>Kubernetes Networking</span><span>Terraform</span>
+          </div>
+        </div>
+        <div class="chips-wrap reveal">
+          <h3>Infrastructure Management</h3>
+          <div class="chips">
+            <span>LAN/WAN & Data-centre Design</span><span>Zero-Trust Security</span><span>Disaster Recovery</span>
+            <span>ITIL Incident & Change</span><span>Architecture Reviews</span><span>Monitoring</span>
+            <span>Log Analysis</span><span>Process Optimization</span><span>Performance Analysis</span>
+          </div>
+        </div>
+        <div class="chips-wrap reveal">
+          <h3>Programming</h3>
+          <div class="chips">
+            <span>Python</span><span>SQL</span><span>JavaScript</span><span>HTML</span><span>CSS</span>
+            <span>PowerShell</span><span>Bash</span><span>Quasar</span><span>Streamlit</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Education & certifications</p>
+          <h2>Strong academic and professional foundation.</h2>
+        </div>
+        <div class="grid-3">
+          <article class="card reveal">
+            <h3>University of Amsterdam</h3>
+            <p class="meta">M.S. Information Studies (Information Systems) · Sep 2024 — Jul 2025</p>
+            <p>Thesis: “Anomaly detection in smart buildings: A case study of the University of Amsterdam’s Lab42 building”.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Corvinus University of Budapest</h3>
+            <p class="meta">B.S. Business Informatics · Sep 2016 — Feb 2021</p>
+            <p>Thesis: “Customer Profiling in the Travel Industry”.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Certifications</h3>
+            <p class="meta">Google Cloud Certified Associate Cloud Engineer · Jun 2023</p>
+            <p><a href="https://google.accredible.com/6f88660a-7cca-46f9-83fd-888b708a1dff" target="_blank" rel="noopener">View credential</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="activities">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Beyond work</p>
+          <h2>Teaching, competition, and long-term volunteering.</h2>
+        </div>
+        <div class="grid-2">
+          <article class="card reveal">
+            <h3>Selected activities</h3>
+            <ul class="list">
+              <li>Operating Systems and Networking course instructor (20+ vocational students), Barcelona (Nov 2025).</li>
+              <li>AnyAge.ai Hackathon, Leiden — 4th to 9th place (Jun 2025).</li>
+              <li>Blue Ribbon Round-Lake-Balaton Sailing Race — placements from 137th to 282nd (2022–2025).</li>
+              <li>Youth group and camp leader (volunteering), Hungary (2016–2021).</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3>Current focus areas</h3>
+            <ul class="list">
+              <li>Scalable test environments for complex systems.</li>
+              <li>Security-first infrastructure design.</li>
+              <li>Workflow automation with practical AI tooling.</li>
+              <li>Bridging technical and business stakeholders.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section" id="contact">
+    <div class="container footer-grid reveal">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2>Let’s build something reliable.</h2>
+      </div>
+      <div class="contact-list">
+        <a href="mailto:agostonreischl@gmail.com">agostonreischl@gmail.com</a>
+        <a href="tel:+36204025637">+36 20 402 5637</a>
+        <a href="https://www.linkedin.com/in/agoston-reischl/" target="_blank" rel="noopener">linkedin.com/in/agoston-reischl</a>
+        <a href="https://github.com/reischlago" target="_blank" rel="noopener">github.com/reischlago</a>
+        <a href="Agoston_Reischl_CV_2026_SE.pdf" target="_blank" rel="noopener">Download CV (2026)</a>
+      </div>
+    </div>
+    <div class="container footer-meta">
+      <p>&copy; <span id="year"></span> Ágoston Reischl</p>
+      <p>No cookies. Minimal tracking-free static site.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
